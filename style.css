@@ -1,0 +1,167 @@
+/* --- Variables de Color (Paleta Profesional) --- */
+:root {
+    --primary-color: #003366;      /* Azul marino oscuro */
+    --secondary-color: #343a40;    /* Gris oscuro para el footer */
+    --accent-color: #28a745;       /* Verde para el botón de WhatsApp */
+    --accent-hover-color: #218838; /* Verde más oscuro para hover */
+    --background-color: #f8f9fa;   /* Gris muy claro para el fondo */
+    --text-color: #343a40;         /* Gris oscuro para el texto */
+    --light-text-color: #ffffff;   /* Texto blanco */
+    --section-bg-color: #ffffff;   /* Fondo blanco para secciones */
+    --border-color: #dee2e6;       /* Color para los bordes sutiles */
+}
+
+/* --- Estilos Generales y Tipografía --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+main {
+    display: block; /* Asegura la compatibilidad con navegadores antiguos */
+}
+
+a {
+    transition: color 0.3s ease;
+}
+
+/* --- Encabezado (Header) --- */
+.header {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 600;
+}
+
+.header p {
+    font-size: 1.2em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* --- Secciones Generales --- */
+.section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 30px;
+    color: var(--primary-color);
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.presentation-text {
+    max-width: 700px;
+    margin: 0 auto;
+    font-size: 1.1em;
+}
+
+/* --- Sección de Contacto WhatsApp --- */
+.whatsapp-contact-section {
+    background-color: var(--section-bg-color);
+    padding: 60px 0;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    text-align: center;
+}
+
+.whatsapp-contact-section p {
+    margin-bottom: 25px;
+    font-size: 1.1em;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    padding: 18px 40px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.25em;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.whatsapp-button:hover,
+.whatsapp-button:focus {
+    background-color: var(--accent-hover-color);
+    transform: translateY(-3px); /* Efecto de elevación */
+    outline: none;
+}
+
+/* --- Información de Contacto y Ubicación --- */
+.contact-info p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    line-height: 1.8;
+}
+
+.contact-info a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+
+/* --- Pie de Página (Footer) --- */
+.footer {
+    background-color: var(--secondary-color);
+    color: var(--light-text-color);
+    text-align: center;
+    padding: 25px 20px;
+    font-size: 0.9em;
+}
+
+/* --- Adaptación para Celulares (Responsive Design) --- */
+@media (max-width: 768px) {
+    .header {
+        padding: 40px 15px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .header p, .presentation-text, .whatsapp-contact-section p, .contact-info p {
+        font-size: 1em;
+    }
+
+    .section {
+        padding: 40px 0;
+    }
+
+    .section h2 {
+        font-size: 1.6em;
+    }
+
+    .whatsapp-button {
+        padding: 15px 30px;
+        font-size: 1.1em;
+    }
+}
