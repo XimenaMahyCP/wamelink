@@ -1,0 +1,146 @@
+/* --- Paleta de Colores Corporativa --- */
+:root {
+    --primary-color: #2c3e50;      /* Gris Grafito Oscuro */
+    --accent-color: #d39e00;       /* Dorado/Ocre Corporativo */
+    --accent-hover-color: #b88a00; /* Dorado más oscuro para hover */
+    --background-color: #fdfdfd;   /* Blanco ligeramente roto */
+    --text-color: #333333;         /* Texto principal casi negro */
+    --light-text-color: #ffffff;   /* Texto blanco */
+    --border-color: #ecf0f1;       /* Borde muy sutil */
+}
+
+/* --- Reseteo y Estilos Base --- */
+html {
+    box-sizing: border-box;
+}
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    text-align: center; /* Asegura que el texto esté centrado por defecto */
+}
+
+/* --- Contenedor Principal para Centrado --- */
+.container {
+    max-width: 900px;
+    margin-left: auto;   /* Clave para centrar el bloque */
+    margin-right: auto;  /* Clave para centrar el bloque */
+    padding: 0 25px;     /* Espacio en los costados para celulares */
+}
+
+/* --- Encabezado y Footer --- */
+.hero, .footer {
+    background-color: var(--primary-color);
+    color: var(--light-text-color);
+    padding: 60px 20px;
+}
+
+.footer {
+    background-color: #2c3e50e0; /* Un poco más suave para diferenciar */
+    padding: 30px 20px;
+}
+
+.hero h1 {
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.hero p {
+    font-size: 1.2em;
+    margin-top: 15px;
+    opacity: 0.9;
+}
+
+/* --- Secciones --- */
+.section {
+    padding: 60px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.section:last-of-type {
+    border-bottom: none;
+}
+
+.section h2 {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+.section-intro {
+    font-size: 1.1em;
+    color: #555;
+}
+
+/* Sección de Llamada a la Acción (CTA) */
+.section-cta {
+    background-color: #ffffff;
+}
+
+.cta-button {
+    display: inline-block;
+    background-color: var(--accent-color);
+    color: var(--light-text-color);
+    padding: 16px 38px;
+    margin-top: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.cta-button:hover, .cta-button:focus {
+    background-color: var(--accent-hover-color);
+    transform: translateY(-3px);
+}
+
+/* --- Información de Contacto --- */
+.contact-info p {
+    margin: 15px 0;
+    font-size: 1.1em;
+}
+
+.contact-info a {
+    color: var(--accent-color);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contact-info a:hover {
+    text-decoration: underline;
+}
+
+/* --- Optimización para Celulares --- */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+
+    .hero h1 {
+        font-size: 1.8em;
+    }
+
+    .hero p, .section-intro, .contact-info p {
+        font-size: 1em;
+    }
+
+    .section h2 {
+        font-size: 1.6em;
+    }
+
+    .cta-button {
+        padding: 14px 30px;
+        font-size: 1em;
+    }
+}
